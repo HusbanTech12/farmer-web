@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustedSupporters from "@/components/TrustedSupporters";
 import SupportingSection from "@/components/SupportingSection";
@@ -15,7 +14,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <TrustedSupporters />

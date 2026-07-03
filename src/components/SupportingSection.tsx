@@ -34,12 +34,6 @@ export default function SupportingSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-end mb-16">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="w-2 h-2 rounded-full bg-green-primary" />
-              <span className="text-muted text-xs font-semibold uppercase tracking-widest">
-                What We Do
-              </span>
-            </div>
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
               Supporting Those Who <br />
               Feed{" "}

@@ -1,7 +1,7 @@
 const checkpoints = [
-  "Provide accessible microfinance services to underserved rural populations",
-  "Promote sustainable agricultural practices through targeted financing",
-  "Build financial literacy and capacity within local communities",
+  "Provide accessible saving & credit services for underserved rural communities",
+  "Support agricultural and livestock entrepreneurship",
+  "Promote financial inclusion and local economic growth",
 ];
 
 export default function MissionSection() {
@@ -14,7 +14,7 @@ export default function MissionSection() {
               className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1599058918144-1ffabb6ab5e0?q=80&w=2069&auto=format&fit=crop')",
+                  "url('/images/home/our-mission-img1.jpg')",
               }}
             />
           </div>
@@ -33,13 +33,13 @@ export default function MissionSection() {
               </span>
             </h2>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-8">
-              We exist to bridge the financial gap in rural Burkina Faso,
-              providing dignified, accessible, and affordable financial services
-              that enable communities to build better futures for themselves and
-              their families.
+              Our mission is to sustainably improve the social and economic
+              conditions of underserved rural populations by providing reliable
+              financial services and personalized support to farmers and
+              livestock breeders across Burkina Faso.
             </p>
 
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {checkpoints.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-green-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">

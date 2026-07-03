@@ -29,7 +29,7 @@ export default function VisionSection() {
               livelihood.
             </p>
 
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {checkpoints.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-6 h-6 rounded-full bg-green-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -60,7 +60,7 @@ export default function VisionSection() {
               className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1527153818091-1a9638521e2a?q=80&w=2069&auto=format&fit=crop')",
+                  "url('/images/home/our-mission-img2.jpg')",
               }}
             />
           </div>
