@@ -33,7 +33,7 @@ const rows = [
 
 export default function BentoSection() {
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-1.5 mb-4">
@@ -72,7 +72,7 @@ export default function BentoSection() {
           </p>
         </div>
 
-        <div className="border border-gray-200 rounded-2xl bg-white p-4 md:p-6 max-w-5xl mx-auto">
+        <div className="border border-gray-200 rounded-2xl p-4 md:p-6 max-w-5xl mx-auto">
           <div className="space-y-4 md:space-y-6">
             {rows.map((row, i) => (
               <div
