@@ -1,14 +1,14 @@
 import Navbar from "@/components/Navbar";
 
-export default function Hero() {
+export default function AboutHero() {
   return (
     <section className="relative pt-4 md:pt-6 pb-8 md:pb-12 px-4 md:px-8">
       <div className="relative max-w-7xl mx-auto min-h-[80vh] md:min-h-[85vh] rounded-3xl overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-[center_left_-200px] md:bg-[center_left_-100px] lg:bg-left"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/home/hero-img.jpg')",
+              "url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/85 via-navy-900/50 to-navy-800/20" />
@@ -19,22 +19,21 @@ export default function Hero() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8">
               <span className="text-white/90 text-xs md:text-sm font-medium">
-                Empowering Rural Communities
+                Empowering Rural Business Fund
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-              Financial Access{" "}
-              <span className="block">for Every Rural</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+              Who We Are, Why{" "}
+              <span className="block">We Exist, and Who</span>
               <span className="serif-accent text-5xl md:text-6xl lg:text-7xl">
-                Entrepreneur
+                We Walk With
               </span>
             </h1>
 
             <p className="text-base md:text-lg text-white/70 max-w-xl mb-10 leading-relaxed">
-              Microfinance Plus provides inclusive banking solutions for farmers
-              &amp; livestock breeders across Burkina Faso. We believe in your
-              potential.
+              We are a community-focused financial NGO working to ensure that
+              rural entrepreneurs are not left behind.
             </p>
 
             <div className="flex flex-wrap gap-3 md:gap-4">
