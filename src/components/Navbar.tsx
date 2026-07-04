@@ -14,18 +14,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 flex justify-center transition-all duration-300 pt-6 ${
-        scrolled ? "bg-navy-900/95 backdrop-blur shadow-lg pt-4" : "bg-transparent"
-      }`}
-    >
-      <div className="inline-flex items-center gap-5 border border-white/25 rounded-full px-5 py-2 bg-white/5 backdrop-blur-sm">
+    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 mt-4">
+      <div className="inline-flex items-center gap-5 border border-white/10 bg-navy-900 rounded-full px-5 py-2">
         <a href="/" className="w-8 h-8 rounded-full bg-green-primary flex items-center justify-center flex-shrink-0">
           <svg
             className="w-4 h-4 text-white"
@@ -47,7 +43,9 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/80 hover:text-white transition px-3 py-1 text-sm font-medium"
+              className={`transition-colors duration-300 px-3 py-1 text-sm font-medium ${
+                scrolled ? "text-green-primary" : "text-white/80 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
@@ -102,7 +100,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden absolute top-20 left-4 right-4 bg-navy-900/95 backdrop-blur rounded-2xl px-6 py-6">
+        <div className="md:hidden absolute top-20 left-4 right-4 rounded-2xl px-6 py-6">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
