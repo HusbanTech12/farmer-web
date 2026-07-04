@@ -35,12 +35,11 @@ export default function Motion({
   once = true,
 }: MotionProps) {
   const initial = variants[animation] || variants.fadeUp;
-  const isHidden = animation === "hidden";
 
   return (
     <motion.div
-      initial={isHidden ? variants.hidden : initial}
-      whileInView={isHidden ? variants.visible : undefined}
+      initial={initial}
+      whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
       viewport={{ once, margin: "-80px" }}
       transition={{
         duration,
