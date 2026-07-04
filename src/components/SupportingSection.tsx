@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const cards = [
   {
     category: "Farming",
@@ -33,7 +37,7 @@ export default function SupportingSection() {
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-end mb-16">
-          <div>
+          <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
               Supporting Those Who <br />
               Feed{" "}
@@ -41,8 +45,8 @@ export default function SupportingSection() {
                 Our Nation
               </span>
             </h2>
-          </div>
-          <div>
+          </Motion>
+          <Motion animation="fadeRight">
             <p className="text-muted text-base md:text-lg leading-relaxed mb-6">
               We provide tailored financial products designed specifically for
               the unique needs of rural communities — from planting season loans
@@ -55,38 +59,37 @@ export default function SupportingSection() {
               Learn More
               <span className="text-lg leading-none">&rarr;</span>
             </a>
-          </div>
+          </Motion>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
           {cards.map((card) => (
-            <div
-              key={card.title}
-              className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition"
-            >
-              <div className="relative h-56 overflow-hidden">
-                <div
-                  className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition duration-500"
-                  style={{ backgroundImage: `url('${card.image}')` }}
-                />
-                <div className="absolute inset-0 bg-black/20" />
-                <span
-                  className={`absolute top-4 left-4 ${card.color} text-white text-xs font-semibold px-3 py-1 rounded-full`}
-                >
-                  {card.category}
-                </span>
+            <StaggerItem key={card.title} animation="scaleUp">
+              <div className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition">
+                <div className="relative h-56 overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition duration-500"
+                    style={{ backgroundImage: `url('${card.image}')` }}
+                  />
+                  <div className="absolute inset-0 bg-black/20" />
+                  <span
+                    className={`absolute top-4 left-4 ${card.color} text-white text-xs font-semibold px-3 py-1 rounded-full`}
+                  >
+                    {card.category}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-charcoal mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-muted text-sm leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-charcoal mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  {card.description}
-                </p>
-              </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

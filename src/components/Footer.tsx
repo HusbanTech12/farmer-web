@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 export default function Footer() {
   const quickLinks = [
     { label: "About Us", href: "#" },
@@ -16,7 +20,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-navy-900 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <Motion animation="fadeUp" className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -81,7 +85,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-      </div>
+      </Motion>
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">

@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const steps = [
   {
     icon: (
@@ -41,7 +45,7 @@ export default function GrowthProcess() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -58,11 +62,11 @@ export default function GrowthProcess() {
             We make financial access simple and straightforward for rural
             entrepreneurs across Burkina Faso.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-10 relative max-w-5xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-10 relative max-w-5xl mx-auto" staggerDelay={0.15}>
           {steps.map((step, i) => (
-            <div key={step.title} className="text-center relative">
+            <StaggerItem key={step.title} animation="scaleUp" className="text-center relative">
               {i > 0 && (
                 <div className="hidden md:block absolute -left-4 top-8 text-green-primary/30 text-xl">
                   &rarr;
@@ -77,9 +81,9 @@ export default function GrowthProcess() {
               <p className="text-muted text-sm leading-relaxed max-w-[220px] mx-auto">
                 {step.caption}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,10 +1,14 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function CTASection() {
   return (
     <section className="relative bg-navy-900 py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900" />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
               Ready to Grow Your{" "}
               <span className="block">Farm or Business?</span>
@@ -88,42 +92,44 @@ export default function CTASection() {
                 Support Our Mission
               </a>
             </div>
-          </div>
+          </Motion>
 
-          <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
-            <h3 className="text-white text-xl font-bold mb-6">
-              Send Us a Message
-            </h3>
-            <form className="space-y-4">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
-                />
-              </div>
-              <div>
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
-                />
-              </div>
-              <div>
-                <textarea
-                  rows={4}
-                  placeholder="Your Message"
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-green-primary hover:bg-green-dark text-white px-6 py-3 rounded-xl font-semibold transition text-sm"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+          <Motion animation="fadeRight">
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
+              <h3 className="text-white text-xl font-bold mb-6">
+                Send Us a Message
+              </h3>
+              <form className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    rows={4}
+                    placeholder="Your Message"
+                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-green-primary hover:bg-green-dark text-white px-6 py-3 rounded-xl font-semibold transition text-sm"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </Motion>
         </div>
       </div>
     </section>

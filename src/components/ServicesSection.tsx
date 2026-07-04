@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const services = [
   {
     icon: "🌾",
@@ -46,7 +50,7 @@ export default function ServicesSection() {
         }}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-green-primary/70 text-xs font-semibold uppercase tracking-widest">
@@ -63,28 +67,29 @@ export default function ServicesSection() {
             Every product we offer is designed with the realities of rural
             communities in mind — flexible, accessible, and built for trust.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" staggerDelay={0.12}>
           {services.map((svc) => (
-            <div
-              key={svc.title}
-              className={`bg-white rounded-2xl p-6 md:p-8 border-l-4 ${svc.color} shadow-lg`}
-            >
+            <StaggerItem key={svc.title} animation="scaleUp">
               <div
-                className={`w-12 h-12 rounded-full ${svc.iconBg} flex items-center justify-center text-xl mb-4`}
+                className={`bg-white rounded-2xl p-6 md:p-8 border-l-4 ${svc.color} shadow-lg`}
               >
-                {svc.icon}
+                <div
+                  className={`w-12 h-12 rounded-full ${svc.iconBg} flex items-center justify-center text-xl mb-4`}
+                >
+                  {svc.icon}
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-charcoal mb-2">
+                  {svc.title}
+                </h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  {svc.description}
+                </p>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-charcoal mb-2">
-                {svc.title}
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                {svc.description}
-              </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

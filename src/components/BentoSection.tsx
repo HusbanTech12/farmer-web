@@ -1,3 +1,7 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 const rows = [
   {
     text: {
@@ -35,7 +39,7 @@ export default function BentoSection() {
   return (
     <section className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-14">
           <div className="flex items-center justify-center gap-1.5 mb-4">
             <svg
               className="w-3.5 h-3.5 text-muted"
@@ -70,42 +74,45 @@ export default function BentoSection() {
             provide accessible financial tools for farmers and livestock
             breeders across Burkina Faso.
           </p>
-        </div>
+        </Motion>
 
         <div className="border border-gray-200 rounded-2xl p-4 md:p-6 max-w-5xl mx-auto">
           <div className="space-y-4 md:space-y-6">
             {rows.map((row, i) => (
-              <div
+              <Motion
                 key={i}
-                className="grid md:grid-cols-2 gap-4 md:gap-6"
+                animation={row.reversed ? "fadeRight" : "fadeLeft"}
+                delay={i * 0.15}
               >
-                <div
-                  className={`flex flex-col justify-center p-6 md:p-8 lg:p-10 min-h-[220px] ${
-                    row.reversed ? "md:order-2" : ""
-                  }`}
-                >
-                  <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-3">
-                    {row.text.title}
-                  </h3>
-                  <p className="text-muted text-sm md:text-base leading-relaxed mb-4">
-                    {row.text.description}
-                  </p>
-                  <a
-                    href={row.text.link}
-                    className="inline-flex items-center gap-2 text-charcoal hover:text-green-primary font-semibold text-sm underline-offset-2 underline transition"
+                <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                  <div
+                    className={`flex flex-col justify-center p-6 md:p-8 lg:p-10 min-h-[220px] ${
+                      row.reversed ? "md:order-2" : ""
+                    }`}
                   >
-                    Learn More
-                    <span className="text-lg leading-none">&rarr;</span>
-                  </a>
-                </div>
+                    <h3 className="text-xl md:text-2xl font-bold text-charcoal mb-3">
+                      {row.text.title}
+                    </h3>
+                    <p className="text-muted text-sm md:text-base leading-relaxed mb-4">
+                      {row.text.description}
+                    </p>
+                    <a
+                      href={row.text.link}
+                      className="inline-flex items-center gap-2 text-charcoal hover:text-green-primary font-semibold text-sm underline-offset-2 underline transition"
+                    >
+                      Learn More
+                      <span className="text-lg leading-none">&rarr;</span>
+                    </a>
+                  </div>
 
-                <div
-                  className={`h-[240px] md:h-[280px] rounded-xl bg-cover bg-center ${
-                    row.reversed ? "md:order-1" : ""
-                  }`}
-                  style={{ backgroundImage: `url('${row.image}')` }}
-                />
-              </div>
+                  <div
+                    className={`h-[240px] md:h-[280px] rounded-xl bg-cover bg-center ${
+                      row.reversed ? "md:order-1" : ""
+                    }`}
+                    style={{ backgroundImage: `url('${row.image}')` }}
+                  />
+                </div>
+              </Motion>
             ))}
           </div>
         </div>
