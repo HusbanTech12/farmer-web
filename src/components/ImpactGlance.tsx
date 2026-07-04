@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const stats = [
   { number: "50,000+", label: "Rural Clients Served" },
   { number: "120+", label: "Villages Reached" },
@@ -20,7 +24,7 @@ export default function ImpactGlance() {
           }}
         />
         <div className="relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
               <span className="text-green-primary/70 text-xs font-semibold uppercase tracking-widest">
@@ -30,21 +34,20 @@ export default function ImpactGlance() {
             <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
               Our Impact at a Glance
             </h2>
-          </div>
+          </Motion>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto" staggerDelay={0.1}>
             {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-green-primary mb-1">
-                  {stat.number}
+              <StaggerItem key={stat.label} animation="scaleUp">
+                <div className="text-center hover:-translate-y-1 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-green-primary mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-white/50 text-sm">{stat.label}</div>
                 </div>
-                <div className="text-white/50 text-sm">{stat.label}</div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

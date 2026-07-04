@@ -15,7 +15,7 @@ export default function MissionSection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Motion animation="fadeLeft" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/home/our-mission-img1.jpg')",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Motion from "@/components/Motion";
 
 const cards = [
   {
@@ -39,7 +40,7 @@ export default function CarouselCards() {
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-end mb-16">
-          <div>
+          <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
               Supporting Those Who <br />
               Feed{" "}
@@ -47,8 +48,8 @@ export default function CarouselCards() {
                 Our Nation
               </span>
             </h2>
-          </div>
-          <div>
+          </Motion>
+          <Motion animation="fadeRight">
             <p className="text-muted text-base md:text-lg leading-relaxed mb-6">
               From farmers to livestock breeders, no bank account? No problem.
               We meet people where they are — literally and financially.
@@ -60,76 +61,78 @@ export default function CarouselCards() {
               Discover Our Services
               <span className="text-lg leading-none">&rarr;</span>
             </a>
-          </div>
+          </Motion>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-300"
-              style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-              {cards.map((card) => (
-                <div key={card.title} className="min-w-0 w-full shrink-0 px-2">
-                  <div className="group rounded-2xl overflow-hidden bg-white shadow-md">
-                    <div className="relative h-56 overflow-hidden">
-                      <div
-                        className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition duration-500"
-                        style={{ backgroundImage: `url('${card.image}')` }}
-                      />
-                      <div className="absolute inset-0 bg-black/10" />
-                      <span
-                        className={`absolute top-4 left-4 ${card.color} text-white text-xs font-semibold px-3 py-1 rounded-full`}
-                      >
-                        {card.category}
-                      </span>
-                    </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-charcoal mb-2">
-                        {card.title}
-                      </h3>
-                      <p className="text-muted text-sm leading-relaxed">
-                        {card.description}
-                      </p>
+        <Motion animation="fadeUp">
+          <div className="relative max-w-5xl mx-auto">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-300"
+                style={{ transform: `translateX(-${current * 100}%)` }}
+              >
+                {cards.map((card) => (
+                  <div key={card.title} className="min-w-0 w-full shrink-0 px-2">
+                    <div className="group rounded-2xl overflow-hidden bg-white shadow-md">
+                      <div className="relative h-56 overflow-hidden">
+                        <div
+                          className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition duration-500"
+                          style={{ backgroundImage: `url('${card.image}')` }}
+                        />
+                        <div className="absolute inset-0 bg-black/10" />
+                        <span
+                          className={`absolute top-4 left-4 ${card.color} text-white text-xs font-semibold px-3 py-1 rounded-full`}
+                        >
+                          {card.category}
+                        </span>
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold text-charcoal mb-2">
+                          {card.title}
+                        </h3>
+                        <p className="text-muted text-sm leading-relaxed">
+                          {card.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            <button
+              onClick={prev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-charcoal hover:text-green-primary hover:shadow-lg hover:scale-110 transition"
+              aria-label="Previous"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-charcoal hover:text-green-primary hover:shadow-lg hover:scale-110 transition"
+              aria-label="Next"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
 
-          <button
-            onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-charcoal hover:text-green-primary transition"
-            aria-label="Previous"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button
-            onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-charcoal hover:text-green-primary transition"
-            aria-label="Next"
-          >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-
-        <div className="flex items-center justify-center gap-2 mt-8">
-          {cards.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full transition ${
-                i === current ? "bg-green-primary" : "bg-gray-300"
-              }`}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
-        </div>
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {cards.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2.5 h-2.5 rounded-full transition ${
+                  i === current ? "bg-green-primary" : "bg-gray-300 hover:bg-green-primary/60"
+                }`}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </Motion>
       </div>
     </section>
   );

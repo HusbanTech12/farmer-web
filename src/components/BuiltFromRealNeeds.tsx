@@ -1,9 +1,13 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function BuiltFromRealNeeds() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
               Built From Real Needs, Shaped by{" "}
               <span className="serif-accent text-4xl md:text-5xl">
@@ -33,17 +37,17 @@ export default function BuiltFromRealNeeds() {
               Learn More
               <span className="text-lg leading-none">&rarr;</span>
             </a>
-          </div>
+          </Motion>
 
-          <div className="relative">
+          <Motion animation="fadeRight" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/home/our-mission-img2.jpg')",
               }}
             />
-          </div>
+          </Motion>
         </div>
       </div>
     </section>

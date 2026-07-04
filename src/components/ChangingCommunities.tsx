@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const cards = [
   {
     icon: "🏦",
@@ -37,7 +41,7 @@ export default function ChangingCommunities() {
   return (
     <section className="bg-cream py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -54,28 +58,29 @@ export default function ChangingCommunities() {
             Our holistic approach goes beyond just loans. We build ecosystems
             of support that enable entire communities to thrive.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" staggerDelay={0.12}>
           {cards.map((card) => (
-            <div
-              key={card.title}
-              className={`bg-white rounded-2xl p-6 md:p-8 border-b-4 ${card.color} shadow-lg`}
-            >
+            <StaggerItem key={card.title} animation="scaleUp">
               <div
-                className={`w-12 h-12 rounded-full ${card.iconBg} flex items-center justify-center text-xl mb-4`}
+                className={`bg-white rounded-2xl p-6 md:p-8 border-b-4 ${card.color} shadow-lg hover:shadow-xl hover:-translate-y-1 transition`}
               >
-                {card.icon}
+                <div
+                  className={`w-12 h-12 rounded-full ${card.iconBg} flex items-center justify-center text-xl mb-4`}
+                >
+                  {card.icon}
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-charcoal mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  {card.description}
+                </p>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-charcoal mb-2">
-                {card.title}
-              </h3>
-              <p className="text-muted text-sm leading-relaxed">
-                {card.description}
-              </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

@@ -1,9 +1,13 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function WhyOurLoan() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
               Why Our Agricultural{" "}
               <span className="serif-accent text-4xl md:text-5xl">
@@ -28,17 +32,17 @@ export default function WhyOurLoan() {
               Learn More
               <span className="text-lg leading-none">&rarr;</span>
             </a>
-          </div>
+          </Motion>
 
-          <div className="relative">
+          <Motion animation="fadeRight" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[450px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[400px] md:h-[450px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop')",
               }}
             />
-          </div>
+          </Motion>
         </div>
       </div>
     </section>

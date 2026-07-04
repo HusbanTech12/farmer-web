@@ -98,7 +98,7 @@ export default function BentoSection() {
                     </p>
                     <a
                       href={row.text.link}
-                      className="inline-flex items-center gap-2 text-charcoal hover:text-green-primary font-semibold text-sm underline-offset-2 underline transition"
+                      className="inline-flex items-center gap-2 text-charcoal hover:text-green-primary font-semibold text-sm underline-offset-2 underline hover:translate-x-1 transition"
                     >
                       Learn More
                       <span className="text-lg leading-none">&rarr;</span>
@@ -106,7 +106,7 @@ export default function BentoSection() {
                   </div>
 
                   <div
-                    className={`h-[240px] md:h-[280px] rounded-xl bg-cover bg-center ${
+                    className={`h-[240px] md:h-[280px] rounded-xl bg-cover bg-center hover:scale-[1.02] transition duration-500 ${
                       row.reversed ? "md:order-1" : ""
                     }`}
                     style={{ backgroundImage: `url('${row.image}')` }}

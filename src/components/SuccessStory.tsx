@@ -1,9 +1,13 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function SuccessStory() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <Motion animation="fadeLeft">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
               <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -33,17 +37,17 @@ export default function SuccessStory() {
                 with confidence.&rdquo;
               </p>
             </div>
-          </div>
+          </Motion>
 
-          <div className="relative">
+          <Motion animation="fadeRight" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/impact/featured-successfull-sec.jpg')",
               }}
             />
-          </div>
+          </Motion>
         </div>
       </div>
     </section>

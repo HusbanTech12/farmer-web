@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const benefits = [
   "Fast and simple application process",
   "Flexible repayment aligned with harvest cycles",
@@ -20,7 +24,7 @@ export default function BenefitsLoan() {
           }}
         />
         <div className="relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-14">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
               <span className="text-green-primary/70 text-xs font-semibold uppercase tracking-widest">
@@ -37,32 +41,34 @@ export default function BenefitsLoan() {
               Designed specifically for the needs of smallholder farmers and
               rural producers.
             </p>
-          </div>
+          </Motion>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <StaggerContainer className="max-w-4xl mx-auto space-y-4" staggerDelay={0.1}>
             {benefits.map((item) => (
-              <div key={item} className="flex items-center gap-4">
-                <div className="w-8 h-8 rounded-full border-2 border-green-primary/40 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-4 h-4 text-green-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 12.75l6 6 9-13.5"
-                    />
-                  </svg>
+              <StaggerItem key={item} animation="fadeUp">
+                <div className="flex items-center gap-4 hover:bg-white/5 rounded-lg p-2 -m-2 transition">
+                  <div className="w-8 h-8 rounded-full border-2 border-green-primary/40 flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-4 h-4 text-green-primary"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2.5}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 12.75l6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-white text-base md:text-lg">
+                    {item}
+                  </span>
                 </div>
-                <span className="text-white text-base md:text-lg">
-                  {item}
-                </span>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </section>

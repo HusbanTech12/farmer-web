@@ -1,7 +1,11 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function MiniCTA() {
   return (
     <section className="bg-white py-16 md:py-20">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <Motion animation="fadeUp" className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight mb-4">
           Ready to Grow Your{" "}
           <span className="serif-accent text-4xl md:text-5xl">
@@ -28,7 +32,7 @@ export default function MiniCTA() {
             Contact Our Team
           </a>
         </div>
-      </div>
+      </Motion>
     </section>
   );
 }

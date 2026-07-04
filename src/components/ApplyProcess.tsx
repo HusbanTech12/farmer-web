@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const steps = [
   {
     step: "Step 1",
@@ -46,7 +50,7 @@ export default function ApplyProcess() {
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -62,17 +66,17 @@ export default function ApplyProcess() {
           <p className="text-muted mt-5 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
             Simple 4-step process to get your funding.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-10 relative max-w-5xl mx-auto">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-10 relative max-w-5xl mx-auto" staggerDelay={0.15}>
           {steps.map((s, i) => (
-            <div key={s.title} className="text-center relative">
+            <StaggerItem key={s.title} animation="scaleUp" className="text-center relative">
               {i > 0 && (
                 <div className="hidden md:block absolute -left-4 top-8 text-green-primary/30 text-xl">
                   &rarr;
                 </div>
               )}
-              <div className="w-16 h-16 rounded-full border-2 border-green-primary/30 flex items-center justify-center mx-auto mb-3 text-green-primary">
+              <div className="w-16 h-16 rounded-full border-2 border-green-primary/30 flex items-center justify-center mx-auto mb-3 text-green-primary hover:border-green-primary hover:bg-green-primary/5 transition">
                 {s.icon}
               </div>
               <span className="text-green-primary text-xs font-semibold uppercase tracking-wider block mb-1">
@@ -84,9 +88,9 @@ export default function ApplyProcess() {
               <p className="text-muted text-sm leading-relaxed max-w-[200px] mx-auto">
                 {s.caption}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

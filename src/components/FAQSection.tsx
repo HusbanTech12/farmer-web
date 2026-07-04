@@ -50,7 +50,7 @@ export default function FAQSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
           <Motion animation="fadeLeft" className="relative">
             <div
-              className="rounded-2xl h-[350px] md:h-[450px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[350px] md:h-[450px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop')",
@@ -63,7 +63,7 @@ export default function FAQSection() {
               <StaggerItem key={i} animation="fadeRight">
                 <div className="bg-white rounded-xl overflow-hidden shadow-sm">
                   <button
-                    className="w-full flex items-center justify-between p-5 text-left"
+                    className="w-full flex items-center justify-between p-5 text-left hover:bg-green-primary/5 transition"
                     onClick={() => toggle(i)}
                   >
                     <span className="font-semibold text-charcoal text-sm md:text-base pr-4">

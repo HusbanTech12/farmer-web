@@ -73,7 +73,7 @@ export default function ServicesSection() {
           {services.map((svc) => (
             <StaggerItem key={svc.title} animation="scaleUp">
               <div
-                className={`bg-white rounded-2xl p-6 md:p-8 border-l-4 ${svc.color} shadow-lg`}
+                className={`bg-white rounded-2xl p-6 md:p-8 border-l-4 ${svc.color} shadow-lg hover:shadow-xl hover:-translate-y-1 transition`}
               >
                 <div
                   className={`w-12 h-12 rounded-full ${svc.iconBg} flex items-center justify-center text-xl mb-4`}

@@ -43,7 +43,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`transition-colors duration-300 px-3 py-1 text-sm font-medium ${
+              className={`transition-colors duration-300 px-3 py-1 text-sm font-medium hover:text-green-primary ${
                 scrolled ? "text-green-primary" : "text-white/80 hover:text-white"
               }`}
             >

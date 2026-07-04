@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const stats = [
   { number: "1,250+", label: "Rural Businesses Supported" },
   { number: "85", label: "Communities Reached" },
@@ -19,20 +23,24 @@ export default function StatsBanner() {
           }}
         />
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10" staggerDelay={0.1}>
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-green-primary mb-1">
-                  {stat.number}
+              <StaggerItem key={stat.label} animation="scaleUp">
+                <div className="text-center hover:-translate-y-1 transition">
+                  <div className="text-3xl md:text-4xl font-bold text-green-primary mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-white/50 text-sm">{stat.label}</div>
                 </div>
-                <div className="text-white/50 text-sm">{stat.label}</div>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
-          <p className="text-center text-white/60 text-base md:text-lg italic max-w-xl mx-auto">
-            &ldquo;Impact isn&apos;t just measured in numbers — it&apos;s
-            measured in lives improved.&rdquo;
-          </p>
+          </StaggerContainer>
+          <Motion animation="fadeUp">
+            <p className="text-center text-white/60 text-base md:text-lg italic max-w-xl mx-auto">
+              &ldquo;Impact isn&apos;t just measured in numbers — it&apos;s
+              measured in lives improved.&rdquo;
+            </p>
+          </Motion>
         </div>
       </div>
     </section>

@@ -72,7 +72,7 @@ export default function GrowthProcess() {
                   &rarr;
                 </div>
               )}
-              <div className="w-16 h-16 rounded-full border-2 border-green-primary/30 flex items-center justify-center mx-auto mb-5 text-green-primary">
+              <div className="w-16 h-16 rounded-full border-2 border-green-primary/30 flex items-center justify-center mx-auto mb-5 text-green-primary hover:border-green-primary hover:bg-green-primary/5 transition">
                 {step.icon}
               </div>
               <h3 className="text-lg font-bold text-charcoal mb-2">

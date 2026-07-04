@@ -1,7 +1,11 @@
+"use client";
+
+import Motion from "@/components/Motion";
+
 export default function BeyondFinancing() {
   return (
     <section className="bg-cream py-20 md:py-28">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <Motion animation="fadeUp" className="max-w-3xl mx-auto px-6 text-center">
         <div className="flex items-center justify-center gap-2 mb-4">
           <span className="w-2 h-2 rounded-full bg-green-primary" />
           <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -22,7 +26,7 @@ export default function BeyondFinancing() {
         <p className="text-charcoal/70 text-base md:text-lg italic max-w-xl mx-auto">
           &ldquo;We succeed when our farmers succeed.&rdquo;
         </p>
-      </div>
+      </Motion>
     </section>
   );
 }

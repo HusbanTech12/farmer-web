@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const services = [
   {
     icon: "🏦",
@@ -54,7 +58,7 @@ export default function CoreFinancialServices() {
   return (
     <section className="py-20 md:py-28 px-4 md:px-8">
       <div className="max-w-7xl mx-auto bg-navy-900 rounded-3xl py-20 md:py-28 px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-green-primary/70 text-xs font-semibold uppercase tracking-widest">
@@ -71,41 +75,40 @@ export default function CoreFinancialServices() {
             Comprehensive solutions tailored to the unique needs of rural
             economies.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <StaggerContainer className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto" staggerDelay={0.1}>
           {services.map((svc) => {
             const Wrapper = svc.link ? "a" : "div";
             const wrapperProps = svc.link ? { href: svc.link } : {};
             return (
-              <Wrapper
-                key={svc.title}
-                {...wrapperProps}
-                className={`bg-white rounded-2xl p-6 md:p-8 shadow-lg ${
-                  svc.link ? "block hover:shadow-xl transition cursor-pointer" : ""
-                }`}
-              >
-                <div
-                  className={`w-12 h-12 rounded-full ${svc.iconBg} flex items-center justify-center text-xl mb-4`}
+              <StaggerItem key={svc.title} animation="scaleUp">
+                <Wrapper
+                  {...wrapperProps}
+                  className="bg-white rounded-2xl p-6 md:p-8 shadow-lg block hover:shadow-xl hover:-translate-y-0.5 transition cursor-pointer"
                 >
-                  {svc.icon}
-                </div>
-                <h3 className="text-lg font-bold text-charcoal mb-2">
-                  {svc.title}
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  {svc.description}
-                </p>
-                {svc.link && (
-                  <span className="inline-flex items-center gap-1 text-green-primary text-sm font-semibold mt-3">
-                    Learn More
-                    <span className="text-lg leading-none">&rarr;</span>
-                  </span>
-                )}
-              </Wrapper>
+                  <div
+                    className={`w-12 h-12 rounded-full ${svc.iconBg} flex items-center justify-center text-xl mb-4`}
+                  >
+                    {svc.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-charcoal mb-2">
+                    {svc.title}
+                  </h3>
+                  <p className="text-muted text-sm leading-relaxed">
+                    {svc.description}
+                  </p>
+                  {svc.link && (
+                    <span className="inline-flex items-center gap-1 text-green-primary text-sm font-semibold mt-3 group-hover:text-green-dark transition">
+                      Learn More
+                      <span className="text-lg leading-none group-hover:translate-x-1 transition">&rarr;</span>
+                    </span>
+                  )}
+                </Wrapper>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

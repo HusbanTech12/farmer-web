@@ -1,3 +1,7 @@
+"use client";
+
+import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+
 const partners = [
   {
     name: "Global Development Fund",
@@ -33,7 +37,7 @@ export default function PartnersSection() {
   return (
     <section className="bg-cream py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-muted text-xs font-semibold uppercase tracking-widest">
@@ -50,25 +54,26 @@ export default function PartnersSection() {
             Collaboration is at the heart of rural development. We partner with
             organizations that share our vision.
           </p>
-        </div>
+        </Motion>
 
-        <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <StaggerContainer className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto" staggerDelay={0.1}>
           {partners.map((p) => (
-            <div
-              key={p.name}
-              className={`bg-white rounded-2xl p-6 text-center border-2 ${p.color} shadow-sm`}
-            >
+            <StaggerItem key={p.name} animation="scaleUp">
               <div
-                className={`w-14 h-14 rounded-xl ${p.iconBg} flex items-center justify-center mx-auto mb-4 ${p.iconColor} font-bold text-lg`}
+                className={`bg-white rounded-2xl p-6 text-center border-2 ${p.color} shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-green-primary transition`}
               >
-                {p.initials}
+                <div
+                  className={`w-14 h-14 rounded-xl ${p.iconBg} flex items-center justify-center mx-auto mb-4 ${p.iconColor} font-bold text-lg`}
+                >
+                  {p.initials}
+                </div>
+                <h3 className="text-sm font-semibold text-charcoal leading-snug">
+                  {p.name}
+                </h3>
               </div>
-              <h3 className="text-sm font-semibold text-charcoal leading-snug">
-                {p.name}
-              </h3>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

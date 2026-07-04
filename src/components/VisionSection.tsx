@@ -63,7 +63,7 @@ export default function VisionSection() {
 
           <Motion animation="fadeRight" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg"
+              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/home/our-mission-img2.jpg')",

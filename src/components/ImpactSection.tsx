@@ -35,7 +35,7 @@ export default function ImpactSection() {
         <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 max-w-4xl mx-auto" staggerDelay={0.1}>
           {stats.map((stat) => (
             <StaggerItem key={stat.label} animation="scaleUp">
-              <div className="text-center">
+              <div className="text-center hover:-translate-y-1 transition">
                 <div className="w-10 h-10 rounded-full border-2 border-green-primary/40 flex items-center justify-center mx-auto mb-4">
                   <svg
                     className="w-5 h-5 text-green-primary"
@@ -62,7 +62,7 @@ export default function ImpactSection() {
 
         <Motion animation="fadeUp" className="relative rounded-2xl overflow-hidden h-[320px] md:h-[420px] max-w-5xl mx-auto">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center hover:scale-[1.02] transition duration-500"
             style={{
               backgroundImage:
                 "url('/images/home/impact.jpg')",
