@@ -26,7 +26,7 @@ export default function AboutHero() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
               Who We Are, Why{" "}
               <span className="block">We Exist, and Who</span>
-              <span className="serif-accent text-5xl md:text-6xl lg:text-7xl">
+              <span className="instrument-italic text-6xl md:text-7xl lg:text-[90px] leading-[1.1]">
                 We Walk With
               </span>
             </h1>
