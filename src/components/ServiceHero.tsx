@@ -26,7 +26,7 @@ export default function ServiceHero() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
               Our Financial{" "}
               <span className="block">Solutions for</span>
-              <span className="serif-accent text-5xl md:text-6xl lg:text-7xl">
+              <span className="instrument-italic text-6xl md:text-7xl lg:text-[90px] leading-[1.1]">
                 Rural Communities
               </span>
             </h1>
