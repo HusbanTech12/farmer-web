@@ -32,7 +32,7 @@ export default function Hero() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
                 Financial Access{" "}
                 <span className="block">for Every Rural</span>
-                <span className="serif-accent text-5xl md:text-6xl lg:text-7xl">
+                <span className="instrument-italic text-6xl md:text-7xl lg:text-[90px] leading-[1.1]">
                   Entrepreneur
                 </span>
               </h1>
