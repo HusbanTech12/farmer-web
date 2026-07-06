@@ -20,10 +20,10 @@ export default function ImpactSection() {
               Impact &amp; Reach
             </span>
           </div>
-          <h2 className="text-[35px] font-bold text-charcoal leading-[57px]">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold text-charcoal leading-tight md:leading-[57px]">
             Creating Measurable Change Across
             <br />
-            <span className="instrument-italic text-[51px] leading-[57px] text-green-primary">
+            <span className="instrument-italic text-3xl sm:text-4xl md:text-[51px] md:leading-[57px] text-green-primary">
               Rural Burkina Faso
             </span>
           </h2>
@@ -63,7 +63,7 @@ export default function ImpactSection() {
           ))}
         </StaggerContainer>
 
-        <Motion animation="fadeUp" className="relative rounded-2xl overflow-hidden h-[320px] md:h-[420px] max-w-5xl mx-auto">
+        <Motion animation="fadeUp" className="relative rounded-2xl overflow-hidden h-[250px] sm:h-[320px] md:h-[420px] max-w-5xl mx-auto">
           <div
             className="absolute inset-0 bg-cover bg-center hover:scale-[1.02] transition duration-500"
             style={{
@@ -72,9 +72,9 @@ export default function ImpactSection() {
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-          <div className="absolute bottom-6 left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-5 py-4 max-w-sm">
+          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-4 py-3 sm:px-5 sm:py-4 max-w-xs sm:max-w-sm">
             <span className="w-2 h-2 rounded-full bg-green-primary flex-shrink-0 mt-1.5" />
-            <p className="text-white text-sm leading-relaxed">
+            <p className="text-white text-xs sm:text-sm leading-relaxed">
               Empowering thousands of farmers and livestock breeders across
               Burkina Faso.
             </p>

@@ -11,11 +11,11 @@ const checkpoints = [
 export default function MissionSection() {
   return (
     <section className="bg-white py-20 md:py-28">
-      <div className="max-w-[1180px] mx-auto px-6 h-[482px] flex items-center gap-[40px]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <Motion animation="fadeLeft" className="relative">
             <div
-              className="rounded-2xl h-[400px] md:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
+              className="rounded-2xl h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/home/our-mission-img1.jpg')",
@@ -23,20 +23,20 @@ export default function MissionSection() {
             />
           </Motion>
 
-          <Motion animation="fadeRight" className="w-[700px] h-[400px] flex flex-col justify-center gap-[20px]">
-            <div className="flex items-center gap-2 mb-4">
+          <Motion animation="fadeRight" className="flex flex-col justify-center gap-5">
+            <div className="flex items-center gap-2 mb-2">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
               <span className="text-muted text-[17px] font-normal tracking-widest leading-8">
                 Our Mission
               </span>
             </div>
-            <h2 className="text-[35px] font-bold text-charcoal leading-[57px] mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold text-charcoal leading-tight md:leading-[57px] mb-4 md:mb-6">
               Empowering rural communities through accessible{" "}
-              <span className="instrument-italic text-[51px] leading-[57px]">
+              <span className="instrument-italic text-3xl sm:text-4xl md:text-[51px] md:leading-[57px]">
                 financial solutions
               </span>
             </h2>
-            <p className="text-muted text-base md:text-lg leading-relaxed mb-8">
+            <p className="text-muted text-base md:text-lg leading-relaxed mb-6 md:mb-8">
               At Microfinance Plus SARL, our mission is to sustainably improve
               the social and economic conditions of rural populations by
               providing reliable financial services and personalized support to

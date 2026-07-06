@@ -42,30 +42,30 @@ export default function FAQSection() {
               FAQ
             </span>
           </div>
-          <h2 className="text-[35px] font-bold text-charcoal leading-[57px]">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold text-charcoal leading-tight md:leading-[57px]">
             Frequently Asked Question
           </h2>
         </Motion>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
-          <Motion animation="fadeLeft" className="relative">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-start max-w-5xl mx-auto">
+          <Motion animation="fadeLeft" className="relative order-2 md:order-1">
             <div
-              className="rounded-2xl h-[350px] md:h-[450px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
+              className="rounded-2xl h-[280px] sm:h-[350px] md:h-[450px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
                   "url('/images/home/our-mission-img1.jpg')",
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl" />
-            <div className="absolute bottom-6 left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-5 py-4 max-w-xs">
+            <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-4 py-3 sm:px-5 sm:py-4 max-w-[220px] sm:max-w-xs">
               <span className="w-2 h-2 rounded-full bg-green-primary flex-shrink-0 mt-1.5" />
-              <p className="text-white text-sm leading-relaxed">
+              <p className="text-white text-xs sm:text-sm leading-relaxed">
                 Find simple answers about our services and process.
               </p>
             </div>
           </Motion>
 
-          <div>
+          <div className="order-1 md:order-2">
             {faqs.map((faq, i) => (
               <div key={i}>
                 <div
@@ -75,7 +75,7 @@ export default function FAQSection() {
                     className="w-full flex items-center justify-between text-left"
                     onClick={() => toggle(i)}
                   >
-                    <span className="font-bold text-charcoal text-[15px] pr-4">
+                    <span className="font-bold text-charcoal text-[14px] sm:text-[15px] pr-4">
                       {faq.question}
                     </span>
                     {openIndex === i ? (

@@ -7,15 +7,15 @@ export default function CTASection() {
     <section className="py-20 md:py-28" style={{ backgroundColor: "#F5F6F5" }}>
       <div className="max-w-7xl mx-auto px-6">
         <div
-          className="grid md:grid-cols-2 overflow-hidden rounded-3xl"
+          className="grid md:grid-cols-2 overflow-hidden"
           style={{ borderRadius: "22px" }}
         >
-          <div className="bg-[#1a1a1a] p-10 md:p-14">
+          <div className="bg-[#1a1a1a] p-8 sm:p-10 md:p-14">
             <Motion animation="fadeLeft">
-              <h2 className="text-[35px] font-bold text-white leading-[57px] mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold text-white leading-tight md:leading-[57px] mb-4">
                 Ready to Grow Your
                 <br />
-                <span className="instrument-italic text-[51px] leading-[57px] text-green-primary">
+                <span className="instrument-italic text-3xl sm:text-4xl md:text-[51px] md:leading-[57px] text-green-primary">
                   Farm or Business?
                 </span>
               </h2>
@@ -113,14 +113,14 @@ export default function CTASection() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#"
-                  className="bg-white hover:bg-gray-100 text-black px-8 py-3.5 rounded-full font-semibold transition flex items-center gap-2 text-sm"
+                  className="bg-white hover:bg-gray-100 text-black px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold transition flex items-center gap-2 text-sm"
                 >
                   Donate Now
                   <span className="text-lg leading-none">&rarr;</span>
                 </a>
                 <a
                   href="#"
-                  className="bg-green-primary hover:bg-green-dark text-white px-8 py-3.5 rounded-full font-semibold transition text-sm"
+                  className="bg-green-primary hover:bg-green-dark text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-semibold transition text-sm"
                 >
                   Support Our Mission
                 </a>
@@ -129,7 +129,7 @@ export default function CTASection() {
           </div>
 
           <div
-            className="relative p-10 md:p-14"
+            className="relative p-8 sm:p-10 md:p-14"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2069&auto=format&fit=crop')",
@@ -139,7 +139,7 @@ export default function CTASection() {
           >
             <div className="absolute inset-0 bg-navy-900/85" />
             <Motion animation="fadeRight" className="relative z-10">
-              <h3 className="text-white text-xl font-bold mb-6">
+              <h3 className="text-white text-lg sm:text-xl font-bold mb-6">
                 Send Us A Message
               </h3>
               <form className="space-y-4" aria-label="Contact form">

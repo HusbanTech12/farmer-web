@@ -56,9 +56,9 @@ export default function GrowthProcess() {
               Simple Process
             </span>
           </div>
-          <h2 className="text-[35px] font-bold text-charcoal leading-[57px]">
+          <h2 className="text-2xl sm:text-3xl md:text-[35px] font-bold text-charcoal leading-tight md:leading-[57px]">
             How We Support{" "}
-            <span className="instrument-italic text-[51px] leading-[57px] text-green-primary">
+            <span className="instrument-italic text-3xl sm:text-4xl md:text-[51px] md:leading-[57px] text-green-primary">
               Your Growth
             </span>
           </h2>
@@ -68,15 +68,15 @@ export default function GrowthProcess() {
           </p>
         </Motion>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-4 relative max-w-5xl mx-auto" staggerDelay={0.15}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 relative max-w-5xl mx-auto" staggerDelay={0.15}>
           {steps.map((step, i) => (
             <StaggerItem key={step.title} animation="fadeUp" className="relative">
               {i > 0 && (
                 <div className="hidden md:block absolute left-0 top-0 bottom-0 w-px bg-gray-300" />
               )}
-              <div className={`md:px-8 ${i > 0 ? "md:pl-12" : "md:pl-8"}`}>
+              <div className={`md:px-6 lg:px-8 ${i > 0 ? "md:pl-10 lg:pl-12" : "md:pl-6 lg:pl-8"}`}>
                 <div className="relative mb-6">
-                  <span className="absolute -top-2 -left-1 text-[60px] font-bold text-green-primary/15 leading-none select-none">
+                  <span className="absolute -top-2 -left-1 text-[50px] md:text-[60px] font-bold text-green-primary/15 leading-none select-none">
                     {step.number}
                   </span>
                   <div className="relative z-10 pt-6">

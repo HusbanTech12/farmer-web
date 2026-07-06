@@ -4,7 +4,7 @@ import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
 
 const services = [
   {
-    icon: "🌾",
+    icon: "\uD83C\uDF3E",
     borderColor: "#46B45F",
     iconBg: "bg-[#46B45F]",
     title: "Micro-loans for Farmers",
@@ -12,7 +12,7 @@ const services = [
       "Low-interest loans tailored to crop cycles. Buy seeds and fertilizer now, repay after harvest.",
   },
   {
-    icon: "🐄",
+    icon: "\uD83D\uDC04",
     borderColor: "#F3B266",
     iconBg: "bg-[#F3B266]",
     title: "Livestock Financing",
@@ -20,7 +20,7 @@ const services = [
       "Specialized capital for purchasing cattle, sheep, and goats to expand your herd and assets.",
   },
   {
-    icon: "🏦",
+    icon: "\uD83C\uDFE6",
     borderColor: "#F36E55",
     iconBg: "bg-[#F36E55]",
     title: "Secure Savings",
@@ -28,7 +28,7 @@ const services = [
       "Safe, fee-free savings accounts that help you build a safety net for your family's future.",
   },
   {
-    icon: "🤝",
+    icon: "\uD83E\uDD1D",
     borderColor: "#6196C9",
     iconBg: "bg-[#6196C9]",
     title: "Community Banking",
@@ -57,10 +57,10 @@ export default function ServicesSection() {
               Our Services
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">
             Financial Tools Built for
             <br />
-            <span className="instrument-italic text-[50px] leading-[57px]">
+            <span className="instrument-italic text-3xl sm:text-4xl md:text-[50px] md:leading-[57px]">
               Rural Life
             </span>
           </h2>
@@ -71,7 +71,7 @@ export default function ServicesSection() {
           </p>
         </Motion>
 
-        <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-[640px] mx-auto" staggerDelay={0.12}>
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[640px] mx-auto" staggerDelay={0.12}>
           {services.map((svc) => (
             <StaggerItem key={svc.title} animation="scaleUp">
               <div
@@ -86,7 +86,7 @@ export default function ServicesSection() {
                 <h3 className="text-[17px] font-bold text-charcoal mb-3 text-center">
                   {svc.title}
                 </h3>
-                <hr className="border-gray-300 mb-3" />
+                <hr className="border-gray-300 mb-3 w-full" />
                 <p className="text-muted text-[14px] leading-relaxed text-center">
                   {svc.description}
                 </p>
