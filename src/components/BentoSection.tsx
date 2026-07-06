@@ -7,7 +7,7 @@ const rows = [
     text: {
       title: "Community First",
       description:
-        "Built on trust and deep relationships with local village leaders and cooperatives across Burkina Faso.",
+        "Built on trust and deep relationships with local village leaders and cooperatives.",
       link: "#",
     },
     image: "/images/home/whats-we-do-img1.jpg",
@@ -17,7 +17,7 @@ const rows = [
     text: {
       title: "Sustainable Growth",
       description:
-        "Financial tools designed to help farms expand and weather seasonal challenges with confidence.",
+        "Financial tools designed to help farms expand and weather seasonal challenges.",
       link: "#",
     },
     image: "/images/home/whats-we-do-img2.jpg",
@@ -27,7 +27,7 @@ const rows = [
     text: {
       title: "Social Impact",
       description:
-        "Profits are reinvested into education and healthcare initiatives for our members and their families.",
+        "Profits are reinvested into education and healthcare initiatives for our members.",
       link: "#",
     },
     image: "/images/home/whats-we-do-img3.jpg",
@@ -78,7 +78,7 @@ export default function BentoSection() {
               >
                 <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                   <div
-                    className={`flex flex-col justify-center p-6 md:p-8 lg:p-10 min-h-[220px] ${
+                    className={`flex flex-col items-start justify-center p-6 md:p-8 lg:p-10 min-h-[220px] ${
                       row.reversed ? "md:order-2" : ""
                     }`}
                   >
@@ -90,10 +90,14 @@ export default function BentoSection() {
                     </p>
                     <a
                       href={row.text.link}
-                      className="inline-flex items-center gap-2 text-charcoal hover:text-green-primary font-semibold text-sm underline-offset-2 underline hover:translate-x-1 transition"
+                      className="inline-flex items-center gap-2 w-fit border-[1.5px] border-charcoal hover:bg-green-primary hover:border-green-primary hover:text-white text-charcoal px-6 py-3 rounded-full font-semibold text-sm transition"
                     >
                       Learn More
-                      <span className="text-lg leading-none">&rarr;</span>
+                      <span className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                      </span>
                     </a>
                   </div>
 

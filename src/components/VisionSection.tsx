@@ -3,34 +3,34 @@
 import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
 
 const checkpoints = [
-  "A Burkina Faso where every rural family has access to fair financial services",
-  "Thriving local economies powered by homegrown entrepreneurship and innovation",
-  "A future where geography no longer determines financial opportunity",
+  "Provide accessible saving & credit services for underserved rural communities",
+  "Support agricultural and livestock entrepreneurship",
+  "Promote financial inclusion and local economic growth",
 ];
 
 export default function VisionSection() {
   return (
     <section className="bg-cream py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto px-6 h-[482px] flex items-center gap-[40px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Motion animation="fadeLeft">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
-              <span className="text-muted text-xs font-semibold uppercase tracking-widest">
+              <span className="text-muted text-[17px] font-normal tracking-widest leading-8">
                 Our Vision
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+            <h2 className="text-[35px] font-bold text-charcoal leading-[57px] mb-6">
               Building a financially inclusive future for{" "}
-              <span className="serif-accent text-4xl md:text-5xl">
+              <span className="instrument-italic text-[51px] leading-[57px]">
                 Rural Burkina Faso
               </span>
             </h2>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-8">
-              We envision a future where every farmer, livestock breeder, and
-              small entrepreneur in rural Burkina Faso has the financial tools
-              and support they need to build a prosperous and sustainable
-              livelihood.
+              At Microfinance Plus SARL, our mission is to sustainably improve
+              the social and economic conditions of rural populations by
+              providing reliable financial services and personalized support to
+              farmers and livestock breeders across Burkina Faso.
             </p>
 
             <StaggerContainer className="space-y-3" staggerDelay={0.1}>

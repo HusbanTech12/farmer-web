@@ -11,7 +11,7 @@ const checkpoints = [
 export default function MissionSection() {
   return (
     <section className="bg-white py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1180px] mx-auto px-6 h-[482px] flex items-center gap-[40px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <Motion animation="fadeLeft" className="relative">
             <div
@@ -23,24 +23,24 @@ export default function MissionSection() {
             />
           </Motion>
 
-          <Motion animation="fadeRight">
+          <Motion animation="fadeRight" className="w-[700px] h-[400px] flex flex-col justify-center gap-[20px]">
             <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-primary" />
-              <span className="text-muted text-xs font-semibold uppercase tracking-widest">
+              <span className="text-muted text-[17px] font-normal tracking-widest leading-8">
                 Our Mission
               </span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight mb-6">
+            <h2 className="text-[35px] font-bold text-charcoal leading-[57px] mb-6">
               Empowering rural communities through accessible{" "}
-              <span className="serif-accent text-4xl md:text-5xl">
+              <span className="instrument-italic text-[51px] leading-[57px]">
                 financial solutions
               </span>
             </h2>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-8">
-              Our mission is to sustainably improve the social and economic
-              conditions of underserved rural populations by providing reliable
-              financial services and personalized support to farmers and
-              livestock breeders across Burkina Faso.
+              At Microfinance Plus SARL, our mission is to sustainably improve
+              the social and economic conditions of rural populations by
+              providing reliable financial services and personalized support to
+              farmers and livestock breeders across Burkina Faso.
             </p>
 
             <StaggerContainer className="space-y-3" staggerDelay={0.1}>
