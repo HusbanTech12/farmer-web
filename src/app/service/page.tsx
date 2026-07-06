@@ -5,7 +5,9 @@ import DesignedForRuralGrowth from "@/components/DesignedForRuralGrowth";
 import CoreFinancialServices from "@/components/CoreFinancialServices";
 import LoanProducts from "@/components/LoanProducts";
 import DepositSolutions from "@/components/DepositSolutions";
+import GrowthProcess from "@/components/GrowthProcess";
 import MiniCTA from "@/components/MiniCTA";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -25,7 +27,9 @@ export default function ServicePage() {
         <CoreFinancialServices />
         <LoanProducts />
         <DepositSolutions />
+        <GrowthProcess />
         <MiniCTA />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

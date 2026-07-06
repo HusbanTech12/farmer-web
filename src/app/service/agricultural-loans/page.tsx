@@ -5,6 +5,7 @@ import WhyOurLoan from "@/components/WhyOurLoan";
 import BenefitsLoan from "@/components/BenefitsLoan";
 import ApplyProcess from "@/components/ApplyProcess";
 import BeyondFinancing from "@/components/BeyondFinancing";
+import RelatedServices from "@/components/RelatedServices";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function AgriculturalLoansPage() {
         <BenefitsLoan />
         <ApplyProcess />
         <BeyondFinancing />
+        <RelatedServices />
         <ServiceFAQ />
         <CTASection />
       </main>

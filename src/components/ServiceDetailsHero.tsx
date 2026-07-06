@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Motion from "@/components/Motion";
 
@@ -20,6 +21,20 @@ export default function ServiceDetailsHero() {
 
         <div className="relative z-10 h-full min-h-[80vh] md:min-h-[85vh] flex flex-col justify-end px-8 md:px-16 lg:px-20 pb-16 md:pb-20 pt-64 md:pt-80">
           <div className="max-w-2xl">
+            <Motion animation="fadeUp" delay={0.1}>
+              <nav className="flex items-center gap-2 text-white/60 text-sm mb-6">
+                <Link href="/" className="hover:text-white transition">
+                  Home
+                </Link>
+                <span>/</span>
+                <Link href="/service" className="hover:text-white transition">
+                  Service
+                </Link>
+                <span>/</span>
+                <span className="text-white">Agricultural Loans</span>
+              </nav>
+            </Motion>
+
             <Motion animation="fadeUp" delay={0.2}>
               <div className="inline-flex items-center bg-white/15 backdrop-blur-sm rounded-full px-4 py-1.5 mb-8">
                 <span className="text-white/90 text-xs md:text-sm font-medium">

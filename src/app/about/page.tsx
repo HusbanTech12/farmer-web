@@ -6,6 +6,7 @@ import WhyWeExistSection from "@/components/WhyWeExistSection";
 import CarouselCards from "@/components/CarouselCards";
 import StatsBanner from "@/components/StatsBanner";
 import PartnersSection from "@/components/PartnersSection";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -26,6 +27,7 @@ export default function AboutPage() {
         <CarouselCards />
         <StatsBanner />
         <PartnersSection />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

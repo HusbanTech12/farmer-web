@@ -30,10 +30,10 @@ export default function ImpactHero() {
 
             <Motion animation="fadeUp" delay={0.4}>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
-                Agricultural{" "}
-                <span className="block">Loans for</span>
+                Creating Lasting{" "}
+                <span className="block">Impact Across</span>
                 <span className="instrument-italic text-6xl md:text-7xl lg:text-[90px] leading-[1.1]">
-                  Rural Farmers
+                  Rural Communities
                 </span>
               </h1>
             </Motion>

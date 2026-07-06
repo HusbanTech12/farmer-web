@@ -4,6 +4,7 @@ import TrustedSupporters from "@/components/TrustedSupporters";
 import SuccessStory from "@/components/SuccessStory";
 import ImpactGlance from "@/components/ImpactGlance";
 import ChangingCommunities from "@/components/ChangingCommunities";
+import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ export default function ImpactPage() {
         <SuccessStory />
         <ImpactGlance />
         <ChangingCommunities />
+        <FAQSection />
         <CTASection />
       </main>
       <Footer />

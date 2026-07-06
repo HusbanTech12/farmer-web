@@ -27,10 +27,10 @@ export default function VisionSection() {
               </span>
             </h2>
             <p className="text-muted text-base md:text-lg leading-relaxed mb-6 md:mb-8">
-              At Microfinance Plus SARL, our mission is to sustainably improve
-              the social and economic conditions of rural populations by
-              providing reliable financial services and personalized support to
-              farmers and livestock breeders across Burkina Faso.
+              At Microfinance Plus SARL, our vision is to create a future where
+              every rural family has access to fair financial services and the
+              opportunity to build a prosperous, sustainable livelihood across
+              Burkina Faso.
             </p>
 
             <StaggerContainer className="space-y-3" staggerDelay={0.1}>

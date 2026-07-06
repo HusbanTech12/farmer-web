@@ -4,18 +4,18 @@ import Motion from "@/components/Motion";
 
 export default function Footer() {
   const quickLinks = [
-    { label: "About Us", href: "#" },
-    { label: "Our Services", href: "#" },
-    { label: "Impact", href: "#" },
+    { label: "About Us", href: "/about" },
+    { label: "Our Services", href: "/service" },
+    { label: "Impact", href: "/impact" },
     { label: "FAQ", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const serviceLinks = [
-    { label: "Micro-loans", href: "#" },
-    { label: "Livestock Financing", href: "#" },
-    { label: "Secure Savings", href: "#" },
-    { label: "Community Banking", href: "#" },
+    { label: "Micro-loans", href: "/service/agricultural-loans" },
+    { label: "Livestock Financing", href: "/service" },
+    { label: "Secure Savings", href: "/service" },
+    { label: "Community Banking", href: "/service" },
   ];
 
   return (
