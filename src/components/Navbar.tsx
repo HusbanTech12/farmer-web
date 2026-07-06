@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 mt-4">
-      <div className="inline-flex items-center gap-5 border border-white/10 bg-navy-900 rounded-full px-5 py-2">
+      <div className="inline-flex items-center gap-3 sm:gap-5 border border-white/10 bg-navy-900/80 backdrop-blur-md rounded-full px-4 sm:px-5 py-2">
         <Link href="/" className="flex-shrink-0">
           <img
             src="/images/home/Logo.png"
@@ -93,13 +93,13 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden absolute top-20 left-4 right-4 rounded-2xl px-6 py-6">
+        <div className="md:hidden absolute top-20 left-4 right-4 bg-navy-900/95 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-6">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-white/80 hover:text-green-primary transition text-sm font-medium"
+                className="text-white/80 hover:text-green-primary transition text-sm font-medium py-1"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
