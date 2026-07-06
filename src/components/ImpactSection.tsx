@@ -2,59 +2,62 @@
 
 import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
 
-const stats = [
-  { number: "10,000+", label: "Farmers Supported" },
-  { number: "95%", label: "Repayment Rate" },
-  { number: "500+", label: "Communities Reached" },
-  { number: "10K+", label: "Jobs Empowered" },
+const checks = [
+  "50,000+ Farmers and livestock breeders supported",
+  "85% Of our clients are rural households",
+  "12 Regions actively served across Burkina Faso",
+  "10+ Years of experience in rural financial inclusion",
 ];
 
 export default function ImpactSection() {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="py-20 md:py-28" style={{ backgroundColor: "#F5F6F5" }}>
       <div className="max-w-7xl mx-auto px-6">
         <Motion animation="fadeUp" className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
-            <span className="text-green-primary/70 text-xs font-semibold uppercase tracking-widest">
-              Impact & Reach
+            <span className="text-muted text-[17px] font-normal tracking-widest leading-8">
+              Impact &amp; Reach
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
-            Creating Measurable Change Across{" "}
-            <span className="serif-accent text-4xl md:text-5xl">
+          <h2 className="text-[35px] font-bold text-charcoal leading-[57px]">
+            Creating Measurable Change Across
+            <br />
+            <span className="instrument-italic text-[51px] leading-[57px] text-green-primary">
               Rural Burkina Faso
             </span>
           </h2>
-          <p className="text-muted mt-5 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            Real numbers, real communities, real transformation across the
-            regions we serve.
+          <p className="text-muted mt-5 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            At Microfinance Plus SARL, we believe real impact is measured by
+            lives improved and communities strengthened. Through accessible
+            financial services, we have supported thousands of rural
+            entrepreneurs in building sustainable livelihoods and stronger
+            local economies.
           </p>
         </Motion>
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 max-w-4xl mx-auto" staggerDelay={0.1}>
-          {stats.map((stat) => (
-            <StaggerItem key={stat.label} animation="scaleUp">
-              <div className="text-center hover:-translate-y-1 transition">
-                <div className="w-10 h-10 rounded-full border-2 border-green-primary/40 flex items-center justify-center mx-auto mb-4">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5 max-w-3xl mx-auto mb-16" staggerDelay={0.1}>
+          {checks.map((item) => (
+            <StaggerItem key={item} animation="fadeUp">
+              <div className="flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-green-primary flex items-center justify-center flex-shrink-0 mt-0.5">
                   <svg
-                    className="w-5 h-5 text-green-primary"
+                    className="w-3.5 h-3.5 text-white"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={2.5}
+                    strokeWidth={3}
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M4.5 12.75l6 6 9-13.5"
+                      d="M5 13l4 4L19 7"
                     />
                   </svg>
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-charcoal mb-1">
-                  {stat.number}
-                </div>
-                <div className="text-muted text-sm">{stat.label}</div>
+                </span>
+                <span className="text-charcoal text-[15px] font-medium">
+                  {item}
+                </span>
               </div>
             </StaggerItem>
           ))}
@@ -68,11 +71,12 @@ export default function ImpactSection() {
                 "url('/images/home/impact.jpg')",
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <p className="text-white/80 text-sm max-w-xl">
-              Farmers and livestock breeders discussing seasonal financial
-              planning during a community banking meeting.
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <div className="absolute bottom-6 left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-5 py-4 max-w-sm">
+            <span className="w-2 h-2 rounded-full bg-green-primary flex-shrink-0 mt-1.5" />
+            <p className="text-white text-sm leading-relaxed">
+              Empowering thousands of farmers and livestock breeders across
+              Burkina Faso.
             </p>
           </div>
         </Motion>

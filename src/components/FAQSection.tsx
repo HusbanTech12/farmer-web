@@ -1,28 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+import Motion from "@/components/Motion";
 
 const faqs = [
   {
-    question: "How do I apply for a micro-loan?",
+    question: "Who can benefit from Microfinance Plus services?",
     answer:
-      "You can apply in person at any of our 50+ village banking centers across Burkina Faso. Bring a valid ID and basic information about your farming or business activity. Our community agents will guide you through the simple application process.",
+      "Our services are designed for rural farmers, livestock breeders, small traders, and entrepreneurs who do not have access to traditional banking services.",
   },
   {
-    question: "What are the interest rates and repayment terms?",
+    question: "Do I need collateral to apply for a loan?",
     answer:
-      "Our interest rates start from as low as 5% APR, with flexible repayment terms tailored to agricultural cycles. We offer 3-month, 6-month, and 12-month repayment plans that align with harvest seasons and income flows.",
+      "No, we use a character-based and community-backed lending model. Your reputation and community standing serve as the foundation for loan approval.",
   },
   {
-    question: "Do I need a bank account to access services?",
+    question: "Which regions do you operate in?",
     answer:
-      "No, you don't need a traditional bank account. We work with mobile money platforms and our own village banking network to ensure our services are accessible to everyone, regardless of their banking history.",
+      "We currently operate across 12 regions in Burkina Faso, including Ouagadougou, Bobo-Dioulasso, Koudougou, Fada N'Gourma, and surrounding rural areas.",
   },
   {
-    question: "How does Microfinance Plus support rural entrepreneurs?",
+    question: "Are your services officially regulated?",
     answer:
-      "Beyond providing capital, we offer financial literacy training, business mentorship, and access to a network of fellow entrepreneurs. Our holistic approach ensures that our clients have the knowledge and support to succeed.",
+      "Yes, Microfinance Plus SARL is a fully licensed and regulated microfinance institution operating under the Central Bank of West African States (BCEAO) framework.",
   },
 ];
 
@@ -33,17 +33,17 @@ export default function FAQSection() {
     setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="py-20 md:py-28" style={{ backgroundColor: "#F5F6F5" }}>
       <div className="max-w-7xl mx-auto px-6">
         <Motion animation="fadeUp" className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="w-2 h-2 rounded-full bg-green-primary" />
-            <span className="text-muted text-xs font-semibold uppercase tracking-widest">
+            <span className="text-muted text-[17px] font-normal tracking-widest leading-8">
               FAQ
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-charcoal">
-            Frequently Asked Questions
+          <h2 className="text-[35px] font-bold text-charcoal leading-[57px]">
+            Frequently Asked Question
           </h2>
         </Motion>
 
@@ -53,49 +53,72 @@ export default function FAQSection() {
               className="rounded-2xl h-[350px] md:h-[450px] bg-cover bg-center shadow-lg hover:scale-[1.02] transition duration-500"
               style={{
                 backgroundImage:
-                  "url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop')",
+                  "url('/images/home/our-mission-img1.jpg')",
               }}
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl" />
+            <div className="absolute bottom-6 left-6 inline-flex items-start gap-3 border border-white/30 backdrop-blur-md rounded-2xl px-5 py-4 max-w-xs">
+              <span className="w-2 h-2 rounded-full bg-green-primary flex-shrink-0 mt-1.5" />
+              <p className="text-white text-sm leading-relaxed">
+                Find simple answers about our services and process.
+              </p>
+            </div>
           </Motion>
 
-          <StaggerContainer className="space-y-3" staggerDelay={0.1}>
+          <div>
             {faqs.map((faq, i) => (
-              <StaggerItem key={i} animation="fadeRight">
-                <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <div key={i}>
+                <div
+                  className={`py-5 ${i > 0 ? "border-t border-gray-300" : ""}`}
+                >
                   <button
-                    className="w-full flex items-center justify-between p-5 text-left hover:bg-green-primary/5 transition"
+                    className="w-full flex items-center justify-between text-left"
                     onClick={() => toggle(i)}
                   >
-                    <span className="font-semibold text-charcoal text-sm md:text-base pr-4">
+                    <span className="font-bold text-charcoal text-[15px] pr-4">
                       {faq.question}
                     </span>
-                    <svg
-                      className={`w-5 h-5 text-green-primary flex-shrink-0 transition-transform duration-200 ${
-                        openIndex === i ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                    {openIndex === i ? (
+                      <svg
+                        className="w-5 h-5 text-charcoal flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M5 12h14"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-5 h-5 text-charcoal flex-shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 5v14m-7-7h14"
+                        />
+                      </svg>
+                    )}
                   </button>
                   {openIndex === i && (
-                    <div className="px-5 pb-5">
+                    <div className="mt-3">
                       <p className="text-muted text-sm leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
                   )}
                 </div>
-              </StaggerItem>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </div>
     </section>
