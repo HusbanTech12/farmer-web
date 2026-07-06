@@ -40,20 +40,8 @@ export default function BentoSection() {
     <section className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-6">
         <Motion animation="fadeUp" className="text-center max-w-2xl mx-auto mb-14">
-          <div className="flex items-center justify-center gap-1.5 mb-4">
-            <svg
-              className="w-3.5 h-3.5 text-muted"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <span className="w-2 h-2 rounded-full bg-green-primary" />
             <span className="text-muted text-xs font-semibold uppercase tracking-widest">
               What We Do
             </span>
@@ -62,17 +50,21 @@ export default function BentoSection() {
           <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
             More Than Just a Bank, We Are a
             <span className="block">
-              Partner in{" "}
-              <span className="serif-accent text-4xl md:text-5xl">
-                Progress
+              <span className="instrument-italic text-4xl md:text-5xl text-green-primary">
+                Partner in Progress
               </span>
             </span>
           </h2>
 
           <p className="text-muted mt-5 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
-            Bridging traditional banking and rural reality — our mission is to
-            provide accessible financial tools for farmers and livestock
-            breeders across Burkina Faso.
+            Founded in Ouagadougou with a vision to bridge the gap between
+            traditional banking and rural realities, we understand that a small
+            loan can mean the difference between a harvest lost and a family fed.
+          </p>
+          <p className="text-muted mt-4 text-base md:text-lg leading-relaxed max-w-lg mx-auto">
+            Our mission is to provide dignified, accessible financial services
+            that empower farmers and livestock breeders to build resilience and
+            prosperity for their communities.
           </p>
         </Motion>
 

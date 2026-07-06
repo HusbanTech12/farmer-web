@@ -8,27 +8,24 @@ const cards = [
     color: "bg-green-primary",
     title: "Farmers",
     description:
-      "Access affordable micro-loans and flexible repayment plans tailored to agricultural cycles and crop seasons.",
-    image:
-      "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2070&auto=format&fit=crop",
+      "Access loans, savings, and guidance to grow your crops sustainably and increase your harvest yields.",
+    image: "/images/home/support-card-women1.jpg",
   },
   {
     category: "Livestock",
     color: "bg-accent-orange",
     title: "Livestock Breeders",
     description:
-      "Specialized financing for livestock purchase, feed, veterinary care, and infrastructure development.",
-    image:
-      "https://images.unsplash.com/photo-1527153818091-1a9638521e2a?q=80&w=2069&auto=format&fit=crop",
+      "Invest in your animals with financial support tailored to your needs for feed, shelter, and healthcare.",
+    image: "/images/home/support-card-men.jpg",
   },
   {
     category: "Entrepreneurship",
     color: "bg-accent-coral",
     title: "Rural Entrepreneurs",
     description:
-      "Seed capital and business development support for small enterprises and agribusiness startups.",
-    image:
-      "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=2071&auto=format&fit=crop",
+      "Start and expand small businesses that strengthen your community and provide essential local services.",
+    image: "/images/home/support-card-women2.jpg",
   },
 ];
 
@@ -40,23 +37,23 @@ export default function SupportingSection() {
           <Motion animation="fadeLeft">
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal leading-tight">
               Supporting Those Who <br />
-              Feed{" "}
-              <span className="serif-accent text-4xl md:text-5xl">
-                Our Nation
+              <span className="instrument-italic text-4xl md:text-5xl" style={{ color: "black" }}>
+                Feed Our Nation
               </span>
             </h2>
           </Motion>
           <Motion animation="fadeRight">
             <p className="text-muted text-base md:text-lg leading-relaxed mb-6">
-              We provide tailored financial products designed specifically for
-              the unique needs of rural communities — from planting season loans
-              to livestock insurance and small business credit.
+              From small-scale farmers to livestock breeders, we provide the
+              financial tools and guidance you need to thrive. No bank account?
+              No problem. Our local branches and agents bring banking to your
+              doorstep.
             </p>
             <a
-              href="#"
+              href="/service"
               className="inline-flex items-center gap-2 bg-green-primary hover:bg-green-dark text-white px-6 py-3 rounded-full font-semibold transition text-sm"
             >
-              Learn More
+              Discover Our Services
               <span className="text-lg leading-none">&rarr;</span>
             </a>
           </Motion>
@@ -65,8 +62,8 @@ export default function SupportingSection() {
         <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
           {cards.map((card) => (
             <StaggerItem key={card.title} animation="scaleUp">
-              <div className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition">
-                <div className="relative h-56 overflow-hidden">
+              <div className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition h-full flex flex-col">
+                <div className="relative h-56 overflow-hidden flex-shrink-0">
                   <div
                     className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition duration-500"
                     style={{ backgroundImage: `url('${card.image}')` }}
@@ -77,8 +74,16 @@ export default function SupportingSection() {
                   >
                     {card.category}
                   </span>
+                  <div className="absolute bottom-4 left-4 flex gap-2">
+                    <span className="bg-green-primary text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      Agriculture
+                    </span>
+                    <span className="bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full">
+                      CropFarming
+                    </span>
+                  </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-charcoal mb-2">
                     {card.title}
                   </h3>

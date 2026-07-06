@@ -1,6 +1,6 @@
 "use client";
 
-import Motion, { StaggerContainer, StaggerItem } from "@/components/Motion";
+import Motion from "@/components/Motion";
 
 export default function Footer() {
   const quickLinks = [
@@ -24,9 +24,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-green-primary flex items-center justify-center text-white font-bold text-sm">
-                M+
-              </div>
+              <img
+                src="/images/home/Logo.png"
+                alt="Microfinance Plus Logo"
+                className="w-8 h-8 rounded-full object-cover"
+              />
               <span className="text-white font-bold text-lg tracking-tight">
                 Microfinance<span className="text-green-primary">+</span>
               </span>

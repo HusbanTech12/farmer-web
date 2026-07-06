@@ -99,25 +99,34 @@ export default function CTASection() {
               <h3 className="text-white text-xl font-bold mb-6">
                 Send Us a Message
               </h3>
-              <form className="space-y-4">
+              <form className="space-y-4" aria-label="Contact form">
                 <div>
+                  <label htmlFor="name" className="sr-only">Your Name</label>
                   <input
+                    id="name"
                     type="text"
                     placeholder="Your Name"
+                    required
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
                   />
                 </div>
                 <div>
+                  <label htmlFor="phone" className="sr-only">Phone Number</label>
                   <input
+                    id="phone"
                     type="tel"
                     placeholder="Phone Number"
+                    required
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition"
                   />
                 </div>
                 <div>
+                  <label htmlFor="message" className="sr-only">Your Message</label>
                   <textarea
+                    id="message"
                     rows={4}
                     placeholder="Your Message"
+                    required
                     className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/40 text-sm focus:outline-none focus:border-green-primary transition resize-none"
                   />
                 </div>

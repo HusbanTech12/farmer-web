@@ -42,7 +42,7 @@ export default function WhyWeExistSection() {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
             Why We Exist{" "}
-            <span className="serif-accent text-4xl md:text-5xl">
+            <span className="instrument-italic text-4xl md:text-5xl">
               Feed Our Nation
             </span>
           </h2>
